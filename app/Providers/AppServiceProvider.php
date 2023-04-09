@@ -23,6 +23,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+      app()->bind(TestService::class, function () {
+        return new TestService();
+      });
         //
     }
 }
